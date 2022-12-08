@@ -13,9 +13,9 @@ int my_strstr(chat *haystack, char *needle);
 
 
 int my_strlen(char *str){
-    int c, len = 0;
+    int len = 0;
 
-    while((c=*str++) != '\0')
+    while(*str++ != '\0')
         len++;
     return len;
 }
@@ -49,9 +49,9 @@ int my_strstr(char *haystack, char *needle){
 
 int main()
 {
-    char st[] = "kembergsbikkemberg";
+    char st[] = "lemur";
     printf("Length of the sting \"%s\" - %d\n", st, my_strlen(st));
-    char st2[] = "12345";
+    char st2[] = "54321";
     printf("Before copy: %s\n", st2);
     my_strcpy(st, st2);
     printf("After copy: %s\n\n", st2);

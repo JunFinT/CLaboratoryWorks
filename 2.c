@@ -16,7 +16,7 @@
 #include <math.h>
 
 double f(double x) {
-    return x * x;
+    return cos(x);
 }
 
 void solve_bis(double a, double b, double eps, double param);
@@ -67,7 +67,7 @@ void solve_chord(double a, double b, double eps, double param) {
 
 
 int main() {
-    if (1 == solve(3, 0., 3., 0.01, 4.)) {
+    if (1 == solve(3, 0, 1.7, 0.000001, 0.5)) {
         printf("На этом участке нет корней");
     }
     return 0;
