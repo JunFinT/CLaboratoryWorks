@@ -14,9 +14,12 @@ int my_strstr(chat *haystack, char *needle);
 
 int my_strlen(char *str){
     int len = 0;
+    char *l = str;
 
-    while(*str++ != '\0')
+    while(*l != '\0') {
         len++;
+        l++;
+    }
     return len;
 }
 
@@ -49,15 +52,16 @@ int my_strstr(char *haystack, char *needle){
 
 int main()
 {
-    char st[] = "lemur";
-    printf("Length of the sting \"%s\" - %d\n", st, my_strlen(st));
-    char st2[] = "54321";
-    printf("Before copy: %s\n", st2);
-    my_strcpy(st, st2);
-    printf("After copy: %s\n\n", st2);
+    char str[] = "lemur";
+    printf("len(\"%s\") = %d\n", str, my_strlen(str));
+    char old_str[] = "ne lemur";
+    printf("old_str = %s\n", old_str);
+    my_strcpy(str, old_str);
+    printf("str was copied into old_str\n");
+    printf("old_str = %s\n\n", old_str);
+
     char haystack[] = "I want to get 'Отл8' on the exam", needle[] = "exam";
-    printf("The string to look in: \"%s\"\nThe substring to look for: \"%s\"\n", haystack, needle);
-    printf("The substring has been found at index %d", my_strstr(haystack, needle));
+    printf("Index of the substring \"%s\" in the string \"%s\" - It's %d", needle, haystack, my_strstr(haystack, needle));
 }
 
 
