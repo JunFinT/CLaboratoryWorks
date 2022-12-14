@@ -28,6 +28,6 @@ int main() {
         i += 1;
     }
 
-    printf("%d\t%lf\t%lf\n", i, sum, ex);
+    printf("%d\t%lf\t%lf\n", i, sum, fabs(ex - sum));
     return 0;
 }
