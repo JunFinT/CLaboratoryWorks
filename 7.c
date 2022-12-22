@@ -66,16 +66,6 @@ void creator(struct Stud **head, char *first_name, char *last_name, int day, int
     }
 }
 
-int counter(Stud *student, char *last_name){
-    int count = 0;
-    while(student != NULL){
-        if(strcmp(student->last_name, last_name) == 0)
-            count++;
-        student = student->next;
-    }
-    return count;
-}
-
 // Основные функции
 
 void save(struct Stud *student, char *filename){
